@@ -100,10 +100,10 @@
                 map.fitBounds(bounds_group.getBounds());
             }
         }
-        map.createPane('pane__0');
-        map.getPane('pane__0').style.zIndex = 400;
-        var layer__0 = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            pane: 'pane__0',
+        map.createPane('pane_MapaBase_0');
+        map.getPane('pane_MapaBase_0').style.zIndex = 400;
+        var layer_MapaBase_0 = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            pane: 'pane_MapaBase_0',
             opacity: 1.0,
             attribution: '',
             minZoom: 1,
@@ -111,8 +111,8 @@
             minNativeZoom: 0,
             maxNativeZoom: 19
         });
-        layer__0;
-        map.addLayer(layer__0);
+        layer_MapaBase_0;
+        map.addLayer(layer_MapaBase_0);
         function pop_SP_1(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -336,7 +336,7 @@
         var overlaysTree = [
             {label: 'Regional<br /><table><tr><td style="text-align: center;"><img src="legend/Regional_2_BSP0.png" /></td><td>BSP</td></tr><tr><td style="text-align: center;"><img src="legend/Regional_2_Centro1.png" /></td><td>Centro</td></tr><tr><td style="text-align: center;"><img src="legend/Regional_2_Noroeste2.png" /></td><td>Noroeste</td></tr><tr><td style="text-align: center;"><img src="legend/Regional_2_Norte3.png" /></td><td>Norte</td></tr><tr><td style="text-align: center;"><img src="legend/Regional_2_Sul4.png" /></td><td>Sul</td></tr><tr><td style="text-align: center;"><img src="legend/Regional_2_5.png" /></td><td></td></tr></table>', layer: layer_Regional_2},
             {label: '<img src="legend/SP_1.png" /> SP', layer: layer_SP_1},
-            {label: "", layer: layer__0},]
+            {label: "Mapa Base", layer: layer_MapaBase_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
             //selectorBack: false,
@@ -415,7 +415,7 @@
             layer: layer_Regional_2,
             initial: false,
             hideMarkerOnCollapse: true,
-            propertyName: 'NOM_PROJET'}));
+            propertyName: 'ID_PROJETO'}));
         document.getElementsByClassName('search-button')[0].className +=
          ' fa fa-binoculars';
         resetLabels([layer_Regional_2]);
